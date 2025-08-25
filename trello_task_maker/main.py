@@ -127,6 +127,10 @@ def main():
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
+def cli():
+    """Entry point for the CLI tool"""
+    main()
+
 
 if __name__ == "__main__":
     main()

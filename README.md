@@ -4,6 +4,25 @@ A command-line interface for pushing JSON-defined cards into specific Trello lis
 
 ## Installation
 
+### Option 1: Install as a package (Recommended)
+
+Clone the repository and install as a development package:
+
+```bash
+git clone <repo_url>
+cd <repo_name>
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+Now you can use the command from anywhere:
+```bash
+trello-task-maker --list today --file test.json
+```
+
+### Option 2: Run directly
+
 Clone the repository and create a Python virtual environment:
 
 ```bash
@@ -33,18 +52,30 @@ The CLI accepts two required arguments:
   - done: Completed tasks
 
 ## Command format
+
+### When installed as package:
+```bash
+trello-task-maker --list <list_name> --file <json_file>
+```
+
+### When running directly:
+```bash
 python3 main.py --list <list_name> --file <json_file>
+```
 
 ## Examples
-push cards to today's list:
+
+Push cards to today's list:
 ```bash
-python3 main.py --list today --file example.json
-```bash
+trello-task-maker --list today --file example.json
+```
+
 Push backlog into planning:
 ```bash
-python3 main.py --list planning --file backlog.json
-```bash
+trello-task-maker --list planning --file backlog.json
+```
+
 Archive finished tasks:
 ```bash
-python3 main.py --list done --file archive.json
+trello-task-maker --list done --file archive.json
 ```
