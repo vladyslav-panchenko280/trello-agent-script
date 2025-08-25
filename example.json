@@ -1,22 +1,22 @@
 {
   "tasks": [
     {
-      "title": "Подготовить отчёт",
-      "description": "Собрать статистику по проекту и оформить в PDF",
+      "title": "Prepare report",
+      "description": "Collect project statistics and export to PDF",
       "labels": ["analytics", "urgent"],
       "due": "2025-09-01",
       "external_id": "report-2025-09-01"
     },
     {
-      "title": "Созвон с клиентом",
-      "description": "Обсудить прогресс, показать демо",
+      "title": "Client call",
+      "description": "Discuss progress and present demo",
       "labels": ["meeting"],
       "due": "2025-09-02",
       "external_id": "client-call-2025-09-02"
     },
     {
-      "title": "Доработать API",
-      "description": "Добавить эндпоинт для выгрузки задач",
+      "title": "Implement API endpoint",
+      "description": "Add export endpoint for tasks",
       "labels": ["backend"],
       "due": "2025-09-05",
       "external_id": "api-task-2025-09-05"
