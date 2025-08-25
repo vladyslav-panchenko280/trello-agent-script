@@ -14,14 +14,14 @@ Use context from:
 - `example.json`
 - `main.py`
 
-These define the workflow, task organization, and Trello integration rules.
+These define the workflow, task organization, and Trello integration rules. The tool is now available as a proper CLI command `trello-task-maker` that can be used anywhere after installation.
 
 ## 4. Detailed task description & rules
 - Each idea or task must be categorized into **today**, **weekly**, or **planning (future)**.  
 - If the task is for today: assign it under `today` list.  
 - If the task is for this week: assign it under `weekly` list.  
 - If it’s a long-term or undefined goal: assign it under `planning`.  
-- Provide **ready-to-run CLI commands** using `main.py` with `--list` and `--file`.  
+- Provide **ready-to-run CLI commands** using `trello-task-maker` with `--list` and `--file`.  
 - Due dates:  
   - If explicitly today, set a due date for today.  
   - If explicitly this week, set due date to Sunday 18:00 (Europe/Tallinn).  
@@ -41,7 +41,7 @@ _Result_: goes into `planning` list, no due date.
 N/A — treat this as first interaction.
 
 ## 7. Immediate task description or request
-Organize the following tasks into Trello lists (`today`, `weekly`, `planning`), assign due dates when applicable, and generate corresponding **CLI requests** using `python3 main.py --list <list> --file <json_file>` format.
+Organize the following tasks into Trello lists (`today`, `weekly`, `planning`), assign due dates when applicable, and generate corresponding **CLI requests** using `trello-task-maker --list <list> --file <json_file>` format.
 
 ## 8. Thinking step by step
 1. Parse each user task.  
@@ -55,7 +55,7 @@ Organize the following tasks into Trello lists (`today`, `weekly`, `planning`), 
 - Output only those lists that have tasks.  
 - For each list:  
   1. Provide JSON content for the file (`<list>.json`).  
-  2. Provide the command to run it with `main.py`.  
+  2. Provide the command to run it with `trello-task-maker`.  
 
 ## 10. Prefilled response
 User tasks to process:
@@ -81,6 +81,6 @@ User tasks to process:
 Organize these tasks into Trello lists (`today`, `weekly`, `planning`), set due dates where required, and for each non-empty list produce:
 
 1. JSON file content in Trello format  
-2. The CLI command to run it with `main.py`  
+2. The CLI command to run it with `trello-task-maker`  
 
 Format the output and execute it.
